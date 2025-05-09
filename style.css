@@ -1,0 +1,246 @@
+body {
+  font-family: 'Roboto', sans-serif;;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    
+
+ }
+ /* header p {
+font-size: 1.8em;
+color: #f0eaea;
+margin-top: 10px;
+}*/
+  
+  header {
+    background-color: #005f73;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header img {
+    margin-top: 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  h2,h3 {
+    font-size: 1.5em; /* oppure prova 2em per renderlo più grande */
+font-family: inherit;
+color: #0a9396;
+border-bottom: 2px solid #eee;
+padding-bottom: 5px;
+  }
+ 
+  a {
+    color: #0a9396;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #00707e;
+    text-decoration: underline;
+  }
+  ul {
+    padding-left: 20px;
+    line-height: 1.8;
+  }
+  @media (max-width: 600px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+    header img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  @media (max-width: 600px) {
+    section {
+      margin: 20px;
+      padding: 20px;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 20px; /* Spazio sopra */
+  }
+  
+  .btn-cv {
+    display: inline-block;
+    padding: 17px 28px;
+    background-color: #0a9396;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .btn-cv:hover {
+    background-color: #05aac0;
+    transform: scale(1.05);
+  }
+ .s {
+font-size: 1.2em;
+color: #000000;
+ align-items: center;
+  text-align: center;
+font-style: Arial;
+margin-top: 10px;
+}
+  .s1 {
+font-size: 1.2em;
+color: #000000;
+ align-items:flex-start; 
+  text-align:left ;
+font-style:oblique 10deg; 
+margin-top: 10px;
+}
+  /*.s2 {
+}*/
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout a griglia */
+  gap: 20px; /* Spaziatura tra i quadrati */
+  margin-top: 20px;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Sfondo bianco traslucido */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Bordo leggero */
+  border-radius: 12px; /* Angoli arrotondati */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombra più intensa */
+}
+
+.project-title {
+  color: black; /* Colore iniziale nero */
+  text-decoration: none; /* Rimuove la sottolineatura per i link */
+  transition: color 0.3s ease; /* Transizione fluida per il cambio colore */
+  cursor: pointer; /* Cambia il cursore per indicare interattività */
+}
+
+.project-title:hover {
+  color: #0a9396; /* Colore al passaggio del mouse */
+  text-decoration: underline; /* Aggiunge la sottolineatura */
+}
+.project-card a {
+  color: black; /* Colore iniziale nero */
+  text-decoration: none; /* Rimuove la sottolineatura */
+  transition: color 0.3s ease; /* Transizione fluida per il cambio colore */
+}
+
+.project-card a:hover {
+  color: #0a9396; /* Colore quando il mouse passa sopra */
+  text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}
+
+.project-card p {
+  margin-top: 10px;
+  color: #333;
+}
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #0a9396;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #00707e;
+}
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-theme header {
+  background-color: #1e1e1e;
+}
+body.dark-theme .project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-theme .project-card {
+  background-color: #808080; /* Grigio */
+  color: #ffffff; /* Testo bianco */
+}
+
+body.dark-theme .project-card p {
+  color: #ffffff; /* Testo bianco per i paragrafi */
+}
+
+
+
+body.dark-theme .project-card a:hover {
+  color: #0b7ef2; /* Colore più chiaro al passaggio del mouse */
+}
+body.dark-theme section {
+  background-color: #808080; /* Sfondo grigio */
+  color: #ffffff; /* Testo bianco */
+}
+
+
+body.dark-theme section a {
+  color: #000000; /* Colore azzurro per i link */
+}
+
+body.dark-theme section a:hover {
+  color: #00707e; /* Colore azzurro scuro al passaggio del mouse */
+}
+body.dark-theme .s {
+  color: #ffffff; /* Testo bianco */
+}
+body.dark-theme .s1 {
+  color: #ffffff; /* Testo bianco */
+}
+body.dark-theme h2,
+body.dark-theme h3 {
+  color: #ffffff; /* Testo bianco */
+  border-bottom-color: #555555; /* Colore del bordo inferiore più scuro */
+}
+body.dark-theme section a1 {
+  color: #ffffff; /* Colore azzurro per i link */
+}
+
+body.dark-theme section a1:hover {
+  color: #00707e; /* Colore azzurro scuro al passaggio del mouse */
+}
